@@ -1,0 +1,164 @@
+<!-- base.html -->
+ {% extends "base.html" %}
+
+{% block title %}About Us - MarketScope{% endblock %}
+
+{% block content %}
+<section class="about-hero">
+  <h1>About Us</h1>
+  <p>"MarketScope is a research-focused firm helping businesses make informed decisions with accurate, up-to-date industry data."</p>
+</section>
+
+<section class="why-choose-us">
+  <h2>Why Choose Us</h2>
+  <ul>
+    <li>✔ Expert Market Analysts</li>
+    <li>✔ Multi-Industry Coverage</li>
+    <li>✔ Fast Custom Research Options</li>
+  </ul>
+</section>
+
+<section class="clients-logos">
+  <h2>Trusted by Industry Leaders</h2>
+  <div class="logo-grid">
+    <div class="logo-box">Client1</div>
+    <div class="logo-box">Client2</div>
+    <div class="logo-box">Client3</div>
+  </div>
+</section>
+{% endblock %}
+
+
+<!-- home.html -->
+{% extends "base.html" %}
+
+{% block title %}Home - MarketScope{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <h1>Empowering Smarter Business Decisions</h1>
+  <div class="hero-buttons">
+    <a href="#" class="btn">View Reports</a>
+    <a href="#" class="btn secondary">Request Research</a>
+  </div>
+</section>
+
+<section class="industries">
+  <h2>Industries We Cover</h2>
+  <div class="industry-grid">
+    <div class="industry-box">Healthcare</div>
+    <div class="industry-box">Technology</div>
+    <div class="industry-box">Automotive</div>
+    <div class="industry-box">Energy</div>
+  </div>
+</section>
+
+<section class="featured-reports">
+  <h2>Featured Reports</h2>
+  <ul>
+    <li>• EV Market Forecast 2025 <a href="#">[Read More]</a></li>
+    <li>• AI in Healthcare Trends <a href="#">[Read More]</a></li>
+  </ul>
+</section>
+
+<section class="about-us">
+  <h2>About Us</h2>
+  <p>We provide deep industry insights to help companies anticipate trends and strategize.</p>
+</section>
+{% endblock %}
+
+
+<!-- reports.html -->
+{% extends "base.html" %}
+
+{% block title %}Reports - MarketScope{% endblock %}
+
+{% block content %}
+<section class="reports-header">
+  <h1>Market Reports</h1>
+  <div class="search-bar">
+    <label for="search">Search:</label>
+    <input type="text" id="search" placeholder="Enter keywords..." />
+  </div>
+</section>
+
+<section class="report-list">
+  <div class="report-card">
+    <h3>EV Market Forecast 2025</h3>
+    <p><strong>Industry:</strong> Automotive | <strong>Year:</strong> 2025</p>
+    <p class="summary">Key insights on EV growth across global markets and trends.</p>
+    <a href="#" class="btn-read">Read More</a>
+  </div>
+
+  <div class="report-card">
+    <h3>AI in Healthcare Trends 2025</h3>
+    <p><strong>Industry:</strong> Healthcare | <strong>Year:</strong> 2025</p>
+    <p class="summary">AI’s role in diagnosis, treatment planning, and hospital efficiency.</p>
+    <a href="#" class="btn-read">Read More</a>
+  </div>
+</section>
+{% endblock %}
+
+<!-- about.html -->
+{% extends "base.html" %}
+
+{% block title %}About Us - MarketScope{% endblock %}
+
+{% block content %}
+<section class="about-hero">
+  <h1>About Us</h1>
+  <p>"MarketScope is a research-focused firm helping businesses make informed decisions with accurate, up-to-date industry data."</p>
+</section>
+
+<section class="why-choose-us">
+  <h2>Why Choose Us</h2>
+  <ul>
+    <li>✔ Expert Market Analysts</li>
+    <li>✔ Multi-Industry Coverage</li>
+    <li>✔ Fast Custom Research Options</li>
+  </ul>
+</section>
+
+<section class="clients-logos">
+  <h2>Trusted by Industry Leaders</h2>
+  <div class="logo-grid">
+    <div class="logo-box">Client1</div>
+    <div class="logo-box">Client2</div>
+    <div class="logo-box">Client3</div>
+  </div>
+</section>
+{% endblock %}
+
+
+<!-- Contact.html -->
+{% extends "base.html" %}
+
+{% block title %}Contact Us - MarketScope{% endblock %}
+
+{% block content %}
+<section class="contact-header">
+  <h1>Contact Us / Request a Report</h1>
+  <p>"Let us know what research you need. Our team will respond within 1 business day."</p>
+</section>
+
+<section class="contact-form">
+  <form method="POST" enctype="multipart/form-data" action="/submit-contact">
+    <input type="text" name="full_name" placeholder="Full Name" required />
+    <input type="email" name="email" placeholder="Email Address" required />
+    <input type="tel" name="phone" placeholder="Phone Number (optional)" />
+    <input type="text" name="industry" placeholder="Industry / Sector" required />
+    <textarea name="requirement" rows="5" placeholder="Describe your requirement..." required></textarea>
+    <label class="upload-label">
+      Upload file (optional)
+      <input type="file" name="file" />
+    </label>
+    <button type="submit" class="btn-submit">Submit</button>
+  </form>
+</section>
+
+<section class="contact-details">
+  <h2>Contact Details</h2>
+  <p>📧 <a href="mailto:info@marketscope.com">info@marketscope.com</a></p>
+  <p>📞 +91-12345-67890</p>
+</section>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us - MarketScope{% endblock %}
+
+{% block content %}
+<section class="contact-header">
+  <h1>Contact Us / Request a Report</h1>
+  <p>"Let us know what research you need. Our team will respond within 1 business day."</p>
+</section>
+
+<section class="contact-form">
+  <form method="POST" enctype="multipart/form-data" action="/submit-contact">
+    <input type="text" name="full_name" placeholder="Full Name" required />
+    <input type="email" name="email" placeholder="Email Address" required />
+    <input type="tel" name="phone" placeholder="Phone Number (optional)" />
+    <input type="text" name="industry" placeholder="Industry / Sector" required />
+    <textarea name="requirement" rows="5" placeholder="Describe your requirement..." required></textarea>
+    <label class="upload-label">
+      Upload file (optional)
+      <input type="file" name="file" />
+    </label>
+    <button type="submit" class="btn-submit">Submit</button>
+  </form>
+</section>
+
+<section class="contact-details">
+  <h2>Contact Details</h2>
+  <p>📧 <a href="mailto:info@marketscope.com">info@marketscope.com</a></p>
+  <p>📞 +91-12345-67890</p>
+</section>
+{% endblock %}
